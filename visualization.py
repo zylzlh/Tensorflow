@@ -39,7 +39,7 @@ with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
     for i in range(1000):
         sess.run(train_step,feed_dict={xs:x_data,ys:y_data})
-        if i%100==0:
+        if i%50==0:
             try:
                 ax.lines.remove(lines[0])
             except:
