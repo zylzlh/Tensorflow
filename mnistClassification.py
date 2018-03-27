@@ -37,13 +37,8 @@ train_step=tf.train.GradientDescentOptimizer(0.3).minimize(cross_entropy)
 saver=tf.train.Saver(max_to_keep=1)
 
 with tf.Session() as sess:
-<<<<<<< HEAD
     if isTrain:
         sess.run(tf.global_variables_initializer())
-=======
-    sess.run(tf.global_variables_initializer())
-    if isTrain:
->>>>>>> 765e3b52cb734f0098625c8592830ffaea173c44
         max_acc=0
         for i in range(train_steps):
             batch_xs,batch_ys=mnist.train.next_batch(Mini_batch)
